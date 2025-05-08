@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CodeInBrain</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Base CSS - Load after external CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4361ee',
+                        secondary: '#3a0ca3',
+                        accent: '#4cc9f0',
+                        dark: '#1a1a2e',
+                    }
+                }
+            },
+            // Important: Prevent Tailwind from conflicting with existing styles
+            important: true,
+            // Ensure Tailwind doesn't override base styles
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
+    <!-- Fix for potential CSS conflicts -->
+    <style>
+        /* Ensure visibility of all sections */
+        section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        /* Fix for container conflicts */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Ensure text is visible */
+        p, h1, h2, h3, h4, h5, h6 {
+            color: inherit;
+            opacity: 1 !important;
+        }
+
+        /* Fix for potential z-index issues */
+        .relative {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Immediate fix for visibility -->
+    <style>
+        body, section, div, p, h1, h2, h3, h4, h5, h6, a, span, img {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        section {
+            display: block !important;
+            min-height: 100px;
+        }
+        .container {
+            display: block !important;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Code<span class="highlight">In</span>Brain</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                    <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li class="nav-item"><a href="internship.html" class="nav-link">Internship</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner - Simplified for better visibility -->
+    <section class="py-20 text-white" style="background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%); visibility: visible !important; display: block !important;">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <h1 class="mb-4 text-5xl font-bold">About Us</h1>
+                <p class="mx-auto max-w-2xl text-xl">Learn more about our mission, vision, and the team behind CodeInBrain</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center -mx-4">
+                <!-- Content Column -->
+                <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative">
+                        <h2 class="text-4xl font-bold mb-6 text-gray-800 relative inline-block">
+                            Our Story
+                            <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary"></span>
+                        </h2>
+                        <div class="prose prose-lg max-w-none text-gray-600">
+                            <p class="mb-6">CodeInBrain was founded in 2023 with a simple mission: to make quality coding education accessible to everyone. What started as a small community of passionate developers has grown into a comprehensive platform serving thousands of students worldwide.</p>
+                            <p>We believe that learning to code is not just about memorizing syntax, but about developing problem-solving skills and a creative mindset. Our project-based approach ensures that students gain practical experience while building their portfolio.</p>
+                        </div>
+
+                        <!-- Stats with counters using Alpine.js - Updated with higher numbers -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+                            <!-- Students Counter - Increased to 10,000+ -->
+                            <div class="text-center" x-data="{ counted: false, target: 10000, current: 0 }"
+                                x-init="setTimeout(() => {
+                                    counted = true;
+                                    let interval = setInterval(() => {
+                                        current = Math.min(current + Math.ceil(target/50), target);
+                                        if(current >= target) clearInterval(interval);
+                                    }, 20);
+                                }, 500)">
+                                <h3 class="text-3xl font-bold text-primary mb-2"><span x-text="current">10,000</span>+</h3>
+                                <p class="text-gray-600">Students</p>
+                            </div>
+
+                            <!-- Courses Counter - Increased to 50+ -->
+                            <div class="text-center" x-data="{ counted: false, target: 50, current: 0 }"
+                                x-init="setTimeout(() => {
+                                    counted = true;
+                                    let interval = setInterval(() => {
+                                        current = Math.min(current + 1, target);
+                                        if(current >= target) clearInterval(interval);
+                                    }, 60);
+                                }, 500)">
+                                <h3 class="text-3xl font-bold text-primary mb-2"><span x-text="current">50</span>+</h3>
+                                <p class="text-gray-600">Courses</p>
+                            </div>
+
+                            <!-- Expert Instructors Counter - Increased to 25+ -->
+                            <div class="text-center" x-data="{ counted: false, target: 25, current: 0 }"
+                                x-init="setTimeout(() => {
+                                    counted = true;
+                                    let interval = setInterval(() => {
+                                        current = Math.min(current + 1, target);
+                                        if(current >= target) clearInterval(interval);
+                                    }, 80);
+                                }, 500)">
+                                <h3 class="text-3xl font-bold text-primary mb-2"><span x-text="current">25</span>+</h3>
+                                <p class="text-gray-600">Expert Instructors</p>
+                            </div>
+
+                            <!-- Success Rate Counter - Increased to 99% -->
+                            <div class="text-center" x-data="{ counted: false, target: 99, current: 0 }"
+                                x-init="setTimeout(() => {
+                                    counted = true;
+                                    let interval = setInterval(() => {
+                                        current = Math.min(current + 1, target);
+                                        if(current >= target) clearInterval(interval);
+                                    }, 40);
+                                }, 500)">
+                                <h3 class="text-3xl font-bold text-primary mb-2"><span x-text="current">99</span>%</h3>
+                                <p class="text-gray-600">Success Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Column with GSAP animation -->
+                <div class="w-full lg:w-1/2 px-4" data-aos="fade-left" data-aos-duration="1000" x-data="{}" x-init="
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: $el,
+                            start: 'top 80%',
+                            end: 'bottom 20%',
+                            toggleActions: 'play none none none'
+                        }
+                    })
+                    .from($el.querySelector('.image-container'), {
+                        y: 50,
+                        opacity: 0,
+                        duration: 1,
+                        ease: 'power3.out'
+                    })
+                ">
+                    <div class="image-container relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-primary rounded-lg"></div>
+                        <img src="assets/images/techteam.jpg" alt="CodeInBrain Team" class="w-full h-auto object-cover rounded-lg shadow-xl relative z-10">
+                        <!-- Floating code elements -->
+                        <div class="code-element absolute -top-6 -right-6 bg-white p-3 rounded-lg shadow-lg z-20 transform rotate-3">
+                            <i class="fas fa-code text-primary text-2xl"></i>
+                        </div>
+                        <div class="code-element absolute -bottom-6 -left-6 bg-white p-3 rounded-lg shadow-lg z-20 transform -rotate-3">
+                            <i class="fas fa-laptop-code text-secondary text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision with Lottie animations -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Our Purpose</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Guided by our mission and vision, we're building the future of coding education</p>
+            </div>
+
+            <div class="flex flex-wrap -mx-4">
+                <!-- Mission Card -->
+                <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0" data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="p-8">
+                            <div class="flex justify-center mb-6">
+                                <!-- Lottie animation for mission -->
+                                <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_rbtawnwz.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                            </div>
+                            <h2 class="text-3xl font-bold mb-4 text-primary text-center">Our Mission</h2>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                To empower individuals with the skills and knowledge needed to thrive in the digital world through accessible, high-quality coding education.
+                            </p>
+                            <div class="mt-6 flex justify-center">
+                                <span class="inline-block bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm font-medium">
+                                    <i class="fas fa-rocket mr-2"></i> Empowering Through Education
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="w-full md:w-1/2 px-4" data-aos="fade-left" data-aos-delay="200">
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden h-full transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                        <div class="p-8">
+                            <div class="flex justify-center mb-6">
+                                <!-- Lottie animation for vision -->
+                                <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_kkflmtur.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                            </div>
+                            <h2 class="text-3xl font-bold mb-4 text-secondary text-center">Our Vision</h2>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                To create a world where anyone, regardless of their background, can learn to code and build innovative solutions to real-world problems.
+                            </p>
+                            <div class="mt-6 flex justify-center">
+                                <span class="inline-block bg-secondary bg-opacity-10 text-secondary px-4 py-2 rounded-full text-sm font-medium">
+                                    <i class="fas fa-lightbulb mr-2"></i> Inclusive Innovation
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values with Scroll Animations -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Our Core Values</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The principles that guide everything we do</p>
+            </div>
+
+            <!-- Interactive values cards with hover effects -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value Card 1 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="100" x-data="{}" x-init="
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: $el,
+                            start: 'top 80%',
+                            toggleActions: 'play none none none'
+                        }
+                    })
+                    .from($el, {
+                        y: 30,
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: 'back.out(1.7)'
+                    })
+                ">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl border-t-4 border-primary">
+                        <div class="p-8">
+                            <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6 mx-auto transform transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
+                                <i class="fas fa-graduation-cap text-primary text-2xl group-hover:text-white transition-colors duration-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Excellence in Education</h3>
+                            <p class="text-gray-600 text-center">We are committed to providing the highest quality educational content and experience, ensuring our students receive the best possible learning journey.</p>
+                            <div class="w-12 h-1 bg-primary mx-auto mt-6 transform origin-left transition-all duration-500 group-hover:w-24"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value Card 2 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="200" x-data="{}" x-init="
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: $el,
+                            start: 'top 80%',
+                            toggleActions: 'play none none none'
+                        }
+                    })
+                    .from($el, {
+                        y: 30,
+                        opacity: 0,
+                        duration: 0.8,
+                        delay: 0.2,
+                        ease: 'back.out(1.7)'
+                    })
+                ">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl border-t-4 border-secondary">
+                        <div class="p-8">
+                            <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-6 mx-auto transform transition-all duration-500 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white">
+                                <i class="fas fa-users text-secondary text-2xl group-hover:text-white transition-colors duration-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Community First</h3>
+                            <p class="text-gray-600 text-center">We believe in the power of community and collaborative learning, fostering an environment where students can learn from each other and grow together.</p>
+                            <div class="w-12 h-1 bg-secondary mx-auto mt-6 transform origin-left transition-all duration-500 group-hover:w-24"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Value Card 3 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="300" x-data="{}" x-init="
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: $el,
+                            start: 'top 80%',
+                            toggleActions: 'play none none none'
+                        }
+                    })
+                    .from($el, {
+                        y: 30,
+                        opacity: 0,
+                        duration: 0.8,
+                        delay: 0.4,
+                        ease: 'back.out(1.7)'
+                    })
+                ">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl border-t-4 border-accent">
+                        <div class="p-8">
+                            <div class="w-16 h-16 rounded-full bg-accent bg-opacity-10 flex items-center justify-center mb-6 mx-auto transform transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fas fa-lightbulb text-accent text-2xl group-hover:text-white transition-colors duration-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Innovation</h3>
+                            <p class="text-gray-600 text-center">We constantly evolve our teaching methods and curriculum to stay ahead of industry trends, ensuring our students are prepared for the ever-changing tech landscape.</p>
+                            <div class="w-12 h-1 bg-accent mx-auto mt-6 transform origin-left transition-all duration-500 group-hover:w-24"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section with Hover Effects -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Meet Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">The passionate individuals behind CodeInBrain</p>
+            </div>
+
+            <!-- Team members with hover effects and animations -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Team Member 1 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/profilelogo.png" alt="Hariom Kumbhkar" class="w-full h-64 object-cover object-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                            <!-- Social icons that appear on hover -->
+                            <div class="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center space-x-4">
+                                <a href="#" class="bg-white text-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-white text-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-white text-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-1 text-gray-800">Hariom Kumbhkar</h3>
+                            <p class="text-primary font-medium mb-3">Founder & CEO</p>
+                            <p class="text-gray-600">Expertise in web development and AI, with a passion for making coding education accessible to everyone.</p>
+                            <!-- Skills badges -->
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Web Dev</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">AI</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/profilelogo.png" alt="Govind Mewada" class="w-full h-64 object-cover object-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                            <!-- Social icons that appear on hover -->
+                            <div class="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center space-x-4">
+                                <a href="#" class="bg-white text-secondary rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-white text-secondary rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-white text-secondary rounded-full w-10 h-10 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-1 text-gray-800">Govind Mewada</h3>
+                            <p class="text-secondary font-medium mb-3">Lead Instructor</p>
+                            <p class="text-gray-600">Full-stack developer with expertise in React, Node.js, and database design, dedicated to teaching the next generation of developers.</p>
+                            <!-- Skills badges -->
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">React</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Node.js</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Databases</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                        <div class="relative overflow-hidden">
+                            <img src="assets/images/profilelogo.png" alt="Manasvi Barde" class="w-full h-64 object-cover object-center">
+                            <div class="absolute inset-0 bg-gradient-to-t from-accent to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                            <!-- Social icons that appear on hover -->
+                            <div class="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex justify-center space-x-4">
+                                <a href="#" class="bg-white text-accent rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="bg-white text-accent rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="bg-white text-accent rounded-full w-10 h-10 flex items-center justify-center hover:bg-accent hover:text-white transition-colors duration-300">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-1 text-gray-800">Manasvi Barde</h3>
+                            <p class="text-accent font-medium mb-3">Data Science Lead</p>
+                            <p class="text-gray-600">Data scientist with background in machine learning and AI applications, passionate about making data science accessible to all.</p>
+                            <!-- Skills badges -->
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Data Science</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">Machine Learning</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Join our team button -->
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="contact.html" class="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-lg hover:bg-secondary transition-colors duration-300 transform hover:-translate-y-1">
+                    <i class="fas fa-users mr-2"></i> Join Our Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section - Simplified for better visibility -->
+    <section class="py-24 text-white" style="background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%); visibility: visible !important; display: block !important;">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Join Our Community</h2>
+                <p class="text-xl mb-10">Become part of our growing community of learners and start your coding journey today</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="courses.html" class="px-8 py-4 bg-white text-primary font-bold rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300">
+                        <i class="fas fa-laptop-code mr-2"></i> Explore Courses
+                    </a>
+                    <a href="contact.html" class="px-8 py-4 bg-transparent text-white font-bold rounded-lg border-2 border-white hover:bg-white hover:text-primary transition-all duration-300">
+                        <i class="fas fa-paper-plane mr-2"></i> Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="newsletter-content" data-aos="fade-right">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Stay updated with our latest courses, events, and tech news</p>
+                </div>
+                <form class="newsletter-form" action="https://formspree.io/f/xovddbke" method="POST" data-aos="fade-left">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer with Tailwind CSS -->
+    <footer class="bg-gray-900 text-white pt-16 pb-6" style="visibility: visible !important; display: block !important;">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">Code<span class="text-primary">In</span>Brain</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering the next generation of developers with quality education and practical skills.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/code.inbrain?igsh=MWdwcmhteXRrazNoeQ==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 relative inline-block">
+                        Quick Links
+                        <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors duration-300">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Courses</a></li>
+                        <li><a href="internship.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Internship</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 relative inline-block">
+                        Contact Us
+                        <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1.5 mr-3 text-primary"></i>
+                            <span class="text-gray-400">123 Tech Street, Bhopal, India</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary"></i>
+                            <span class="text-gray-400">+91 2343438763</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span class="text-gray-400">codeinbrain24@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 relative inline-block">
+                        Stay Updated
+                        <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates</p>
+                    <form action="https://formspree.io/f/xovddbke" method="POST" class="flex">
+                        <input type="email" name="email" placeholder="Your email" class="bg-gray-800 text-gray-200 px-4 py-2 rounded-l-md focus:outline-none focus:ring-1 focus:ring-primary w-full" required>
+                        <input type="hidden" name="_subject" value="Newsletter Subscription">
+                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 my-8"></div>
+
+            <!-- Copyright -->
+            <div class="text-center text-gray-500">
+                <p>&copy; 2023 CodeInBrain. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Base JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Initialize all libraries -->
+    <script>
+        // Ensure all content is visible immediately
+        document.querySelectorAll('section, div, p, h1, h2, h3, h4, h5, h6').forEach(el => {
+            el.style.visibility = 'visible';
+            el.style.opacity = '1';
+        });
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS with simpler settings
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out',
+                once: true,  // Only animate once to avoid visibility issues
+                mirror: false,
+                offset: 50,
+                disable: window.innerWidth < 768  // Disable on mobile for better performance
+            });
+
+            // Initialize GSAP ScrollTrigger
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+
+                // Simpler header animation
+                gsap.to("header", {
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "50px top",
+                        scrub: true
+                    },
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                    backgroundColor: "rgba(255, 255, 255, 0.98)",
+                    padding: "10px 0",
+                    duration: 0.5
+                });
+            }
+
+            // Initialize Smooth Scroll with simpler settings
+            if (typeof SmoothScroll !== 'undefined') {
+                var scroll = new SmoothScroll('a[href*="#"]', {
+                    speed: 800,
+                    speedAsDuration: true,
+                    easing: 'easeInOutCubic'
+                });
+            }
+
+            // Make sure all Alpine.js components are initialized
+            if (typeof Alpine !== 'undefined') {
+                // Alpine is already initialized via the defer attribute
+                console.log('Alpine.js is loaded and running');
+            }
+
+            // Ensure all Lottie animations are visible
+            document.querySelectorAll('lottie-player').forEach(player => {
+                player.load(player.src);
+            });
+        });
+
+        // Fallback to ensure everything is visible after 1 second
+        setTimeout(function() {
+            document.querySelectorAll('section, div, p, h1, h2, h3, h4, h5, h6').forEach(el => {
+                el.style.visibility = 'visible';
+                el.style.opacity = '1';
+                el.style.display = el.tagName === 'DIV' || el.tagName === 'SECTION' ? 'block' : '';
+            });
+            console.log('Visibility fallback applied');
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Programs - CodeInBrain</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Base CSS - Load after external CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- Lottie Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Swiper JS for better sliders -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Particles.js for background effects -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4361ee',
+                        secondary: '#3a0ca3',
+                        accent: '#4cc9f0',
+                        dark: '#1a1a2e',
+                    }
+                }
+            },
+            important: true,
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
+    <!-- Fix for potential CSS conflicts -->
+    <style>
+        /* Ensure visibility of all sections */
+        section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        /* Fix for container conflicts */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Ensure text is visible */
+        p, h1, h2, h3, h4, h5, h6 {
+            color: inherit;
+            opacity: 1 !important;
+        }
+
+        /* Fix for potential z-index issues */
+        .relative {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Custom styles for internship page */
+        .timeline-item {
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-card {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Immediate fix for visibility -->
+    <style>
+        body, section, div, p, h1, h2, h3, h4, h5, h6, a, span, img {
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        section {
+            display: block !important;
+            min-height: 100px;
+        }
+        .container {
+            display: block !important;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Code<span class="highlight">In</span>Brain</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li class="nav-item"><a href="internship.html" class="nav-link active">Internship</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner with Particles.js Background -->
+    <section class="relative py-24 overflow-hidden" style="background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);">
+        <!-- Particles.js Container -->
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+
+        <div class="container relative z-10 mx-auto px-4">
+            <div class="text-center text-white" data-aos="zoom-in" data-aos-duration="1000">
+                <h1 class="text-5xl font-bold mb-4">Internship Programs</h1>
+                <p class="text-xl max-w-2xl mx-auto">Gain real-world experience and kickstart your tech career</p>
+
+                <!-- Animated CTA Button -->
+                <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#apply" class="inline-flex items-center px-8 py-3 bg-white text-primary font-bold rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-rocket mr-2"></i> Apply Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initialize Particles.js -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS("particles-js", {
+                    "particles": {
+                        "number": {
+                            "value": 80,
+                            "density": {
+                                "enable": true,
+                                "value_area": 800
+                            }
+                        },
+                        "color": {
+                            "value": "#ffffff"
+                        },
+                        "shape": {
+                            "type": "circle",
+                            "stroke": {
+                                "width": 0,
+                                "color": "#000000"
+                            },
+                            "polygon": {
+                                "nb_sides": 5
+                            }
+                        },
+                        "opacity": {
+                            "value": 0.5,
+                            "random": false,
+                            "anim": {
+                                "enable": false,
+                                "speed": 1,
+                                "opacity_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "size": {
+                            "value": 3,
+                            "random": true,
+                            "anim": {
+                                "enable": false,
+                                "speed": 40,
+                                "size_min": 0.1,
+                                "sync": false
+                            }
+                        },
+                        "line_linked": {
+                            "enable": true,
+                            "distance": 150,
+                            "color": "#ffffff",
+                            "opacity": 0.4,
+                            "width": 1
+                        },
+                        "move": {
+                            "enable": true,
+                            "speed": 2,
+                            "direction": "none",
+                            "random": false,
+                            "straight": false,
+                            "out_mode": "out",
+                            "bounce": false,
+                            "attract": {
+                                "enable": false,
+                                "rotateX": 600,
+                                "rotateY": 1200
+                            }
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": {
+                                "enable": true,
+                                "mode": "grab"
+                            },
+                            "onclick": {
+                                "enable": true,
+                                "mode": "push"
+                            },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": {
+                                "distance": 140,
+                                "line_linked": {
+                                    "opacity": 1
+                                }
+                            },
+                            "bubble": {
+                                "distance": 400,
+                                "size": 40,
+                                "duration": 2,
+                                "opacity": 8,
+                                "speed": 3
+                            },
+                            "repulse": {
+                                "distance": 200,
+                                "duration": 0.4
+                            },
+                            "push": {
+                                "particles_nb": 4
+                            },
+                            "remove": {
+                                "particles_nb": 2
+                            }
+                        }
+                    },
+                    "retina_detect": true
+                });
+            }
+        });
+    </script>
+
+    <!-- Internship Overview with Modern Design -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center -mx-4">
+                <!-- Content Column -->
+                <div class="w-full lg:w-1/2 px-4 mb-12 lg:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative">
+                        <h2 class="text-4xl font-bold mb-6 text-gray-800 relative inline-block">
+                            Launch Your Tech Career with Our Internship Programs
+                            <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-primary"></span>
+                        </h2>
+                        <div class="prose prose-lg max-w-none text-gray-600">
+                            <p class="mb-6">At CodeInBrain, we believe in learning by doing. Our internship programs are designed to provide hands-on experience in real-world projects, mentorship from industry experts, and a supportive community of like-minded individuals.</p>
+                            <p>Whether you're a student looking to gain practical experience or a career changer seeking to build your portfolio, our internships offer a structured path to develop your skills and enhance your employability in the tech industry.</p>
+                        </div>
+
+                        <!-- Stats with counters using Alpine.js -->
+                        <div class="grid grid-cols-3 gap-6 mt-10">
+                            <!-- Interns Placed Counter - Increased to 1000+ -->
+                            <div class="text-center" x-data="{ counted: false, target: 1000, current: 0 }"
+                                x-init="setTimeout(() => {
+                                    counted = true;
+                                    let interval = setInterval(() => {
+                                        current = Math.min(current + Math.ceil(target/50), target);
+                                        if(current >= target) clearInterval(interval);
+                                    }, 20);
+                                }, 500)">
+                                <h3 class="text-3xl font-bold text-primary mb-2"><span x-text="current">1000</span>+</h3>
+                                <p class="text-gray-600">Interns Placed</p>
+                            </div>
+
+                            <!-- Partner Companies Counter - Increased to 200+ -->
+                            <div class="text-center" x-data="{ counted: false, target: 200, current: 0 }"
+                                x-init="setTimeout(() => {
+                                    counted = true;
+                                    let interval = setInterval(() => {
+                                        current = Math.min(current + Math.ceil(target/50), target);
+                                        if(current >= target) clearInterval(interval);
+                                    }, 30);
+                                }, 500)">
+                                <h3 class="text-3xl font-bold text-primary mb-2"><span x-text="current">200</span>+</h3>
+                                <p class="text-gray-600">Partner Companies</p>
+                            </div>
+
+                            <!-- Placement Rate Counter - Increased to 95% -->
+                            <div class="text-center" x-data="{ counted: false, target: 95, current: 0 }"
+                                x-init="setTimeout(() => {
+                                    counted = true;
+                                    let interval = setInterval(() => {
+                                        current = Math.min(current + 1, target);
+                                        if(current >= target) clearInterval(interval);
+                                    }, 40);
+                                }, 500)">
+                                <h3 class="text-3xl font-bold text-primary mb-2"><span x-text="current">95</span>%</h3>
+                                <p class="text-gray-600">Placement Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Column with GSAP animation -->
+                <div class="w-full lg:w-1/2 px-4" data-aos="fade-left" data-aos-duration="1000" x-data="{}" x-init="
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: $el,
+                            start: 'top 80%',
+                            end: 'bottom 20%',
+                            toggleActions: 'play none none none'
+                        }
+                    })
+                    .from($el.querySelector('.image-container'), {
+                        y: 50,
+                        opacity: 0,
+                        duration: 1,
+                        ease: 'power3.out'
+                    })
+                ">
+                    <div class="image-container relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full border-2 border-primary rounded-lg"></div>
+                        <img src="assets/images/intern prgram.png" alt="Internship Program" class="w-full h-auto object-cover rounded-lg shadow-xl relative z-10">
+                        <!-- Floating elements -->
+                        <div class="absolute -top-6 -right-6 bg-white p-3 rounded-lg shadow-lg z-20 transform rotate-3">
+                            <i class="fas fa-laptop-code text-primary text-2xl"></i>
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white p-3 rounded-lg shadow-lg z-20 transform -rotate-3">
+                            <i class="fas fa-graduation-cap text-secondary text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Programs with Modern Cards -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Our Internship Programs</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose the program that aligns with your career goals</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Web Development Card -->
+                <div class="group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl border-t-4 border-primary">
+                        <div class="p-8">
+                            <div class="w-16 h-16 rounded-full bg-primary bg-opacity-10 flex items-center justify-center mb-6 mx-auto transform transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-white">
+                                <i class="fas fa-laptop-code text-primary text-2xl group-hover:text-white transition-colors duration-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Web Development Internship</h3>
+                            <p class="text-gray-600 text-center mb-6">Work on real client projects using modern web technologies like React, Node.js, and more.</p>
+
+                            <!-- Program Details -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>1-month program</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Remote/In-office options</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Stipend offered</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Certificate upon completion</span>
+                                </li>
+                            </ul>
+
+                            <!-- Tech Stack Tags -->
+                            <div class="flex flex-wrap gap-2 mb-8 justify-center">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">React</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">Node.js</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">MongoDB</span>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="#apply" class="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg shadow-md hover:bg-secondary transition-colors duration-300 transform hover:-translate-y-1">
+                                    <i class="fas fa-paper-plane mr-2"></i> Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Development Card -->
+                <div class="group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl border-t-4 border-secondary">
+                        <div class="p-8">
+                            <div class="w-16 h-16 rounded-full bg-secondary bg-opacity-10 flex items-center justify-center mb-6 mx-auto transform transition-all duration-500 group-hover:scale-110 group-hover:bg-secondary group-hover:text-white">
+                                <i class="fas fa-mobile-alt text-secondary text-2xl group-hover:text-white transition-colors duration-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Mobile App Development Internship</h3>
+                            <p class="text-gray-600 text-center mb-6">Build cross-platform mobile applications using Flutter and React Native.</p>
+
+                            <!-- Program Details -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>2-month program</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Remote/In-office options</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Stipend offered</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Certificate upon completion</span>
+                                </li>
+                            </ul>
+
+                            <!-- Tech Stack Tags -->
+                            <div class="flex flex-wrap gap-2 mb-8 justify-center">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Flutter</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">React Native</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-xs font-medium">Firebase</span>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="#apply" class="inline-flex items-center px-6 py-3 bg-secondary text-white font-medium rounded-lg shadow-md hover:bg-primary transition-colors duration-300 transform hover:-translate-y-1">
+                                    <i class="fas fa-paper-plane mr-2"></i> Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science Card -->
+                <div class="group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg h-full transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl border-t-4 border-accent">
+                        <div class="p-8">
+                            <div class="w-16 h-16 rounded-full bg-accent bg-opacity-10 flex items-center justify-center mb-6 mx-auto transform transition-all duration-500 group-hover:scale-110 group-hover:bg-accent group-hover:text-white">
+                                <i class="fas fa-database text-accent text-2xl group-hover:text-white transition-colors duration-500"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-center text-gray-800">Data Science Internship</h3>
+                            <p class="text-gray-600 text-center mb-6">Work on data analysis, visualization, and machine learning projects.</p>
+
+                            <!-- Program Details -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>2-month program</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Remote/In-office options</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Stipend offered</span>
+                                </li>
+                                <li class="flex items-center text-gray-600">
+                                    <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                                    <span>Certificate upon completion</span>
+                                </li>
+                            </ul>
+
+                            <!-- Tech Stack Tags -->
+                            <div class="flex flex-wrap gap-2 mb-8 justify-center">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">Python</span>
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-medium">TensorFlow</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">Pandas</span>
+                            </div>
+
+                            <div class="text-center">
+                                <a href="#apply" class="inline-flex items-center px-6 py-3 bg-accent text-white font-medium rounded-lg shadow-md hover:bg-primary transition-colors duration-300 transform hover:-translate-y-1">
+                                    <i class="fas fa-paper-plane mr-2"></i> Apply Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Process with GSAP Timeline -->
+    <section class="py-20 bg-white" id="process-section">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold mb-4 text-gray-800">Our Internship Process</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A structured approach to ensure a valuable learning experience</p>
+            </div>
+
+            <!-- Modern Timeline with GSAP Animations -->
+            <div class="relative" x-data="{}" x-init="
+                gsap.registerPlugin(ScrollTrigger);
+
+                const timeline = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: '#process-section',
+                        start: 'top 60%',
+                        end: 'bottom 20%',
+                        toggleActions: 'play none none none'
+                    }
+                });
+
+                // Animate the timeline line
+                timeline.from('.timeline-line', {
+                    scaleY: 0,
+                    transformOrigin: 'top center',
+                    duration: 1.5,
+                    ease: 'power3.out'
+                });
+
+                // Animate each timeline item
+                document.querySelectorAll('.timeline-item').forEach((item, index) => {
+                    timeline.from(item, {
+                        opacity: 0,
+                        x: index % 2 === 0 ? -50 : 50,
+                        duration: 0.8,
+                        ease: 'back.out(1.7)',
+                        stagger: 0.2
+                    }, '-=0.6');
+                });
+            ">
+                <!-- Timeline Line -->
+                <div class="timeline-line absolute left-1/2 top-0 bottom-0 w-1 bg-primary transform -translate-x-1/2 z-0"></div>
+
+                <!-- Timeline Items -->
+                <div class="relative z-10">
+                    <!-- Step 1: Application -->
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:items-start mb-16 relative">
+                        <div class="timeline-number w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">1</div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right md:mr-6 md:self-center">
+                            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Application</h3>
+                                <p class="text-gray-600">Submit your application with your resume and portfolio (if available).</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12 md:ml-6"></div>
+                    </div>
+
+                    <!-- Step 2: Technical Assessment -->
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:items-start mb-16 relative">
+                        <div class="timeline-number w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">2</div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right md:mr-6 hidden md:block"></div>
+                        <div class="md:w-1/2 md:pl-12 md:ml-6 md:self-center">
+                            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Technical Assessment</h3>
+                                <p class="text-gray-600">Complete a small coding challenge to demonstrate your skills.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Interview -->
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:items-start mb-16 relative">
+                        <div class="timeline-number w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">3</div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right md:mr-6 md:self-center">
+                            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Interview</h3>
+                                <p class="text-gray-600">Meet with our team to discuss your background and goals.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12 md:ml-6"></div>
+                    </div>
+
+                    <!-- Step 4: Onboarding -->
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:items-start mb-16 relative">
+                        <div class="timeline-number w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">4</div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right md:mr-6 hidden md:block"></div>
+                        <div class="md:w-1/2 md:pl-12 md:ml-6 md:self-center">
+                            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Onboarding</h3>
+                                <p class="text-gray-600">Get familiar with our tools, processes, and team members.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Project Work -->
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:items-start mb-16 relative">
+                        <div class="timeline-number w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">5</div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right md:mr-6 md:self-center">
+                            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Project Work</h3>
+                                <p class="text-gray-600">Work on real projects with guidance from experienced mentors.</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block md:w-1/2 md:pl-12 md:ml-6"></div>
+                    </div>
+
+                    <!-- Step 6: Completion & Certification -->
+                    <div class="timeline-item flex flex-col md:flex-row items-center md:items-start relative">
+                        <div class="timeline-number w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-xl font-bold z-10 mb-4 md:mb-0 md:absolute md:left-1/2 md:transform md:-translate-x-1/2">6</div>
+                        <div class="md:w-1/2 md:pr-12 md:text-right md:mr-6 hidden md:block"></div>
+                        <div class="md:w-1/2 md:pl-12 md:ml-6 md:self-center">
+                            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <h3 class="text-xl font-bold mb-2 text-primary">Completion & Certification</h3>
+                                <p class="text-gray-600">Receive feedback, certification, and potential job opportunities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Application Form with Modern Design - Single Step -->
+    <section id="apply" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block px-4 py-1 bg-primary bg-opacity-10 text-primary rounded-full text-sm font-medium mb-4">LAUNCH YOUR CAREER</span>
+                <h2 class="text-5xl font-extrabold mb-6 text-gray-800 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Apply for an Internship</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">Transform your skills into real-world experience and kickstart your journey in the tech industry. Our internships open doors to exciting career opportunities.</p>
+                <div class="flex flex-wrap justify-center gap-4 mt-8">
+                    <div class="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                        <i class="fas fa-calendar-alt text-primary mr-2"></i>
+                        <span class="text-gray-700">3-6 Month Programs</span>
+                    </div>
+                    <div class="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                        <i class="fas fa-certificate text-primary mr-2"></i>
+                        <span class="text-gray-700">Certification Provided</span>
+                    </div>
+                    <div class="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                        <i class="fas fa-users text-primary mr-2"></i>
+                        <span class="text-gray-700">Mentorship Included</span>
+                    </div>
+                    <div class="flex items-center bg-gray-100 rounded-full px-4 py-2">
+                        <i class="fas fa-laptop-code text-primary mr-2"></i>
+                        <span class="text-gray-700">Hands-on Projects</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+
+
+                    <div class="p-8 md:p-12">
+                        <!-- Application Form with Alpine.js for interactivity -->
+                        <div x-data="{
+                            formData: {
+                                name: '',
+                                email: '',
+                                phone: '',
+                                program: '',
+                                portfolio: '',
+                                message: '',
+                                terms: false
+                            },
+                            submitForm() {
+                                // Let the browser handle form validation with HTML5 validation
+                                // The required attributes on the form fields will handle validation
+
+                                // Get the form element
+                                const form = document.getElementById('application-form');
+
+                                // Submit the form directly to Formspree
+                                form.submit();
+                            }
+                        }">
+
+
+
+
+                            <!-- Application Form -->
+                            <form id="application-form" action="https://formspree.io/f/xovddbke" method="POST" enctype="multipart/form-data" @submit.prevent="submitForm()" class="space-y-8">
+                                <!-- Personal Information -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name <span class="text-red-500">*</span></label>
+                                        <div class="relative">
+                                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                                <i class="fas fa-user text-gray-400"></i>
+                                            </div>
+                                            <input type="text" id="name" name="name" x-model="formData.name" class="w-full pl-10 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address <span class="text-red-500">*</span></label>
+                                        <div class="relative">
+                                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                                <i class="fas fa-envelope text-gray-400"></i>
+                                            </div>
+                                            <input type="email" id="email" name="email" x-model="formData.email" class="w-full pl-10 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number <span class="text-red-500">*</span></label>
+                                        <div class="relative">
+                                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                                <i class="fas fa-phone text-gray-400"></i>
+                                            </div>
+                                            <input type="tel" id="phone" name="phone" x-model="formData.phone" class="w-full pl-10 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="program" class="block text-sm font-medium text-gray-700 mb-2">Internship Program <span class="text-red-500">*</span></label>
+                                        <div class="relative">
+                                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                                <i class="fas fa-laptop-code text-gray-400"></i>
+                                            </div>
+                                            <select id="program" name="program" x-model="formData.program" class="w-full pl-10 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent appearance-none" required>
+                                                <option value="">Select a program</option>
+                                                <option value="Web Development Internship">Web Development Internship</option>
+                                                <option value="Mobile App Development Internship">Mobile App Development Internship</option>
+                                                <option value="Data Science Internship">Data Science Internship</option>
+                                                <option value="Cloud Computing Internship">Cloud Computing Internship</option>
+                                            </select>
+                                            <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                                <i class="fas fa-chevron-down text-gray-400"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="resume" class="block text-sm font-medium text-gray-700 mb-2">Upload Resume (PDF) <span class="text-red-500">*</span></label>
+                                    <div class="flex items-center justify-center w-full">
+                                        <label for="resume" class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+                                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                                <i class="fas fa-cloud-upload-alt text-3xl text-gray-400 mb-2"></i>
+                                                <p class="mb-2 text-sm text-gray-500"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                                                <p class="text-xs text-gray-500">PDF (MAX. 5MB)</p>
+                                            </div>
+                                            <input id="resume" name="resume" type="file" accept=".pdf" class="hidden" required />
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="portfolio" class="block text-sm font-medium text-gray-700 mb-2">Portfolio URL (if available)</label>
+                                    <div class="relative">
+                                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fas fa-globe text-gray-400"></i>
+                                        </div>
+                                        <input type="url" id="portfolio" name="portfolio" x-model="formData.portfolio" placeholder="https://yourportfolio.com" class="w-full pl-10 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Why do you want to join this internship? <span class="text-red-500">*</span></label>
+                                    <div class="relative">
+                                        <textarea id="message" name="message" x-model="formData.message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start mb-6">
+                                    <div class="flex items-center h-5">
+                                        <input id="terms" name="terms" type="checkbox" x-model="formData.terms" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary">
+                                    </div>
+                                    <label for="terms" class="ml-2 text-sm font-medium text-gray-700">
+                                        I agree to the <a href="#" class="text-primary hover:underline">Terms and Conditions</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a>
+                                        <span class="text-red-500">*</span>
+                                    </label>
+                                </div>
+
+                                <input type="hidden" name="_subject" value="New Internship Application from CodeInBrain">
+                                <input type="text" name="_gotcha" style="display:none">
+
+                                <!-- Enhanced Submit Button with Animation -->
+                                <div class="text-center">
+                                    <button type="submit"
+                                        class="group relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-bold text-white rounded-lg bg-gradient-to-r from-primary to-secondary shadow-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+
+                                        <!-- Background Animation -->
+                                        <span class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-primary to-secondary"></span>
+                                        <span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition-all duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 opacity-30 group-hover:rotate-90 ease"></span>
+
+                                        <!-- Button Content -->
+                                        <span class="relative flex items-center text-lg">
+                                            <i class="fas fa-paper-plane mr-3 text-xl"></i>
+                                            <span class="font-medium">Submit Application</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="newsletter-content" data-aos="fade-right">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Stay updated with our latest courses, events, and tech news</p>
+                </div>
+                <form class="newsletter-form" action="https://formspree.io/f/xovddbke" method="POST" data-aos="fade-left">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer with Tailwind CSS -->
+    <footer class="bg-gray-900 text-white pt-16 pb-6" style="visibility: visible !important; display: block !important;">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div class="col-span-1 lg:col-span-1">
+                    <div class="mb-4">
+                        <span class="text-2xl font-bold">Code<span class="text-primary">In</span>Brain</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Empowering the next generation of developers with quality education and practical skills.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/code.inbrain?igsh=MWdwcmhteXRrazNoeQ==" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 relative inline-block">
+                        Quick Links
+                        <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-primary transition-colors duration-300">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Courses</a></li>
+                        <li><a href="internship.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Internship</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-primary transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 relative inline-block">
+                        Contact Us
+                        <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1.5 mr-3 text-primary"></i>
+                            <span class="text-gray-400">123 Tech Street, Bhopal, India</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-primary"></i>
+                            <span class="text-gray-400">+91 2343438763</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-primary"></i>
+                            <span class="text-gray-400">codeinbrain24@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 relative inline-block">
+                        Stay Updated
+                        <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-primary"></span>
+                    </h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates</p>
+                    <form action="https://formspree.io/f/xovddbke" method="POST" class="flex">
+                        <input type="email" name="email" placeholder="Your email" class="bg-gray-800 text-gray-200 px-4 py-2 rounded-l-md focus:outline-none focus:ring-1 focus:ring-primary w-full" required>
+                        <input type="hidden" name="_subject" value="Newsletter Subscription">
+                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r-md hover:bg-blue-700 transition-colors duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-800 my-8"></div>
+
+            <!-- Copyright -->
+            <div class="text-center text-gray-500">
+                <p>&copy; 2023 CodeInBrain. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Base JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Initialize all libraries -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ensure all content is visible
+            document.querySelectorAll('section, div, p, h1, h2, h3, h4, h5, h6').forEach(el => {
+                el.style.visibility = 'visible';
+                el.style.opacity = '1';
+            });
+
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: false,
+                mirror: false,
+                offset: 50
+            });
+
+            // Initialize GSAP ScrollTrigger
+            if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                gsap.registerPlugin(ScrollTrigger);
+
+                // Animate header on scroll
+                gsap.to("header", {
+                    scrollTrigger: {
+                        trigger: "body",
+                        start: "top top",
+                        end: "50px top",
+                        scrub: true
+                    },
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                    backgroundColor: "rgba(255, 255, 255, 0.98)",
+                    padding: "10px 0",
+                    duration: 0.5
+                });
+
+                // Animate program cards on scroll
+                gsap.utils.toArray('.program-card').forEach(card => {
+                    gsap.from(card, {
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 80%",
+                            toggleActions: "play none none none"
+                        },
+                        y: 50,
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: "power3.out"
+                    });
+                });
+            }
+
+            // Initialize Smooth Scroll
+            if (typeof SmoothScroll !== 'undefined') {
+                var scroll = new SmoothScroll('a[href*="#"]', {
+                    speed: 800,
+                    speedAsDuration: true,
+                    easing: 'easeInOutCubic'
+                });
+            }
+
+            // Initialize Swiper if available
+            if (typeof Swiper !== 'undefined') {
+                new Swiper('.testimonial-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                        },
+                    }
+                });
+            }
+
+            // Make sure all Alpine.js components are initialized
+            if (typeof Alpine !== 'undefined') {
+                // Alpine is already initialized via the defer attribute
+                console.log('Alpine.js is loaded and running');
+            }
+
+            // Ensure all Lottie animations are visible
+            document.querySelectorAll('lottie-player').forEach(player => {
+                if (player.load) {
+                    player.load(player.src);
+                }
+            });
+
+            // Fallback to ensure everything is visible after 1 second
+            setTimeout(function() {
+                document.querySelectorAll('section, div, p, h1, h2, h3, h4, h5, h6').forEach(el => {
+                    el.style.visibility = 'visible';
+                    el.style.opacity = '1';
+                    el.style.display = el.tagName === 'DIV' || el.tagName === 'SECTION' ? 'block' : '';
+                });
+                console.log('Visibility fallback applied');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

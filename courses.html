@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - CodeInBrain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">Code<span class="highlight">In</span>Brain</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="courses.html" class="nav-link active">Courses</a></li>
+                    <li class="nav-item"><a href="internship.html" class="nav-link">Internship</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1 data-aos="fade-up">Our Courses</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Explore our comprehensive range of coding courses</p>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="course-categories">
+        <div class="container">
+            <div class="categories-filter" data-aos="fade-up" data-aos-delay="300">
+                <button class="filter-btn active" data-filter="all">All Courses</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Development</button>
+                <button class="filter-btn" data-filter="data">Data Science</button>
+                <button class="filter-btn" data-filter="cloud">Cloud Computing</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-grid">
+                <!-- Web Development Courses -->
+                <div class="course-card" data-category="web" data-aos="fade-up" data-aos-delay="400">
+                    <div class="course-image">
+                        <img src="assets/images/full stack web dev.png" alt="Web Development">
+                        <div class="course-badge">Bestseller</div>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-tag">Beginner to Advanced</span>
+                        <h3>Full Stack Web Development</h3>
+                        <p>Master HTML, CSS, JavaScript, React, Node.js and more</p>
+                        <div class="course-details">
+                            <div class="course-info">
+                                <i class="fas fa-clock"></i>
+                                <span>12 Weeks</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-video"></i>
+                                <span>120+ Lessons</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>1500+ Students</span>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">₹12,999</span>
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="web" data-aos="fade-up" data-aos-delay="500">
+                    <div class="course-image">
+                        <img src="assets/images/front end dev.png" alt="Frontend Development">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-tag">Beginner Friendly</span>
+                        <h3>Frontend Web Development</h3>
+                        <p>Learn HTML, CSS, JavaScript, and modern frontend frameworks</p>
+                        <div class="course-details">
+                            <div class="course-info">
+                                <i class="fas fa-clock"></i>
+                                <span>8 Weeks</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-video"></i>
+                                <span>80+ Lessons</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>1200+ Students</span>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">₹8,999</span>
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="course-image">
+                        <img src="assets/images/backend dev.png" alt="Backend Development">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-tag">Intermediate</span>
+                        <h3>Backend Development with Node.js</h3>
+                        <p>Build robust server-side applications with Node.js and Express</p>
+                        <div class="course-details">
+                            <div class="course-info">
+                                <i class="fas fa-clock"></i>
+                                <span>10 Weeks</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-video"></i>
+                                <span>90+ Lessons</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>800+ Students</span>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">₹9,999</span>
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Development Courses -->
+                <div class="course-card" data-category="mobile" data-aos="fade-up" data-aos-delay="700">
+                    <div class="course-image">
+                        <img src="assets/images/app dev.png" alt="Mobile Development">
+                        <div class="course-badge">New</div>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-tag">Beginner Friendly</span>
+                        <h3>Mobile App Development</h3>
+                        <p>Create iOS and Android apps with React Native and Flutter</p>
+                        <div class="course-details">
+                            <div class="course-info">
+                                <i class="fas fa-clock"></i>
+                                <span>10 Weeks</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-video"></i>
+                                <span>100+ Lessons</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>600+ Students</span>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">₹11,999</span>
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card" data-category="mobile" data-aos="fade-up" data-aos-delay="800">
+                    <div class="course-image">
+                        <img src="assets/images/flutter dev.png" alt="Flutter Development">
+                    </div>
+                    <div class="course-content">
+                        <span class="course-tag">Intermediate</span>
+                        <h3>Flutter Development</h3>
+                        <p>Build beautiful cross-platform mobile apps with Flutter</p>
+                        <div class="course-details">
+                            <div class="course-info">
+                                <i class="fas fa-clock"></i>
+                                <span>8 Weeks</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-video"></i>
+                                <span>70+ Lessons</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>400+ Students</span>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">₹9,999</span>
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science Courses -->
+                <div class="course-card" data-category="data" data-aos="fade-up" data-aos-delay="900">                    <div class="course-image">
+                        <img src="assets/images/data s.png" alt="Data Science">
+                        <div class="course-badge">Bestseller</div>
+                    </div>
+                    <div class="course-content">
+                        <span class="course-tag">Intermediate</span>
+                        <h3>Data Science & Analytics</h3>
+                        <p>Learn Python, SQL, data visualization, and machine learning</p>
+                        <div class="course-details">
+                            <div class="course-info">
+                                <i class="fas fa-clock"></i>
+                                <span>12 Weeks</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-video"></i>
+                                <span>120+ Lessons</span>
+                            </div>
+                            <div class="course-info">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>1000+ Students</span>
+                            </div>
+                        </div>
+                        <div class="course-price">
+                            <span class="price">₹14,999</span>
+                            <a href="#" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Course FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our courses</p>
+            </div>
+            <div class="faq-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I enroll in a course?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To enroll in a course, simply click on the "Enroll Now" button on the course page. You'll be directed to our secure payment gateway where you can complete your registration.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I get lifetime access to course materials?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, once you enroll in a course, you get lifetime access to all course materials, updates, and the community forum.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are there any prerequisites for the courses?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Prerequisites vary by course. Beginner courses typically don't require any prior knowledge, while intermediate and advanced courses may require some basic understanding of programming concepts.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer any certifications?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, upon successful completion of a course, you'll receive a CodeInBrain certificate that you can add to your resume and LinkedIn profile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="newsletter-content" data-aos="fade-right">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Stay updated with our latest courses, events, and tech news</p>
+                </div>
+                <form class="newsletter-form" action="https://formspree.io/f/xovddbke" method="POST" data-aos="fade-left">
+                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="hidden" name="_subject" value="New Newsletter Subscription">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">
+                        <span class="logo-text">Code<span class="highlight">In</span>Brain</span>
+                    </div>
+                    <p>Empowering the next generation of developers with quality education and practical skills.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/code.inbrain?igsh=MWdwcmhteXRrazNoeQ=="><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="internship.html">Internship</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Bhopal, India</p>
+                    <p><i class="fas fa-phone"></i> +91 1234567890</p>
+                    <p><i class="fas fa-envelope"></i> info@codeinbrain.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CodeInBrain. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enrollment Modal -->
+    <div id="enrollment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Enroll in <span id="course-title"></span></h2>
+            <p>Please fill out the form below to enroll in this course.</p>
+            <form id="enrollment-form" action="https://formspree.io/f/xovddbke" method="POST">
+                <div class="form-group">
+                    <label for="enroll-name">Full Name</label>
+                    <input type="text" id="enroll-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="enroll-email">Email Address</label>
+                    <input type="email" id="enroll-email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="enroll-phone">Phone Number</label>
+                    <input type="tel" id="enroll-phone" name="phone" required>
+                </div>
+                <input type="hidden" id="enroll-course" name="course" value="">
+                <input type="hidden" id="enroll-price" name="price" value="">
+                <input type="hidden" name="_subject" value="New Course Enrollment">
+                <div class="form-group">
+                    <label for="enroll-message">Any specific requirements or questions?</label>
+                    <textarea id="enroll-message" name="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Enrollment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Course filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+
+            // Initialize GSAP ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Animate navbar on scroll
+            gsap.to("header", {
+                scrollTrigger: {
+                    trigger: "body",
+                    start: "top top",
+                    end: "50px top",
+                    scrub: true
+                },
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                backgroundColor: "rgba(255, 255, 255, 0.98)",
+                padding: "10px 0",
+                duration: 0.5
+            });
+
+            // Get DOM elements
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const courseCards = document.querySelectorAll('.course-card');
+
+            // Animate course cards on hover
+            courseCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    gsap.to(card, {
+                        y: -15,
+                        boxShadow: "0 15px 30px rgba(0, 0, 0, 0.15)",
+                        duration: 0.3
+                    });
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    gsap.to(card, {
+                        y: 0,
+                        boxShadow: "0 5px 15px rgba(0, 0, 0, 0.1)",
+                        duration: 0.3
+                    });
+                });
+            });
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+
+                    // Get filter value
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    // Filter courses
+                    courseCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // FAQ toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+
+                    const icon = item.querySelector('.faq-toggle i');
+                    if (item.classList.contains('active')) {
+                        icon.classList.replace('fa-plus', 'fa-minus');
+                    } else {
+                        icon.classList.replace('fa-minus', 'fa-plus');
+                    }
+                });
+            });
+
+            // Enrollment Modal Functionality
+            const modal = document.getElementById('enrollment-modal');
+            const closeModal = document.querySelector('.close-modal');
+            const enrollButtons = document.querySelectorAll('.course-price .btn');
+
+            // Open modal when enroll button is clicked
+            enrollButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Get course details
+                    const courseCard = this.closest('.course-card');
+                    const courseTitle = courseCard.querySelector('h3').textContent;
+                    const coursePrice = courseCard.querySelector('.price').textContent;
+
+                    // Set values in the form
+                    document.getElementById('course-title').textContent = courseTitle;
+                    document.getElementById('enroll-course').value = courseTitle;
+                    document.getElementById('enroll-price').value = coursePrice;
+
+                    // Show modal
+                    modal.style.display = 'block';
+                });
+            });
+
+            // Close modal when X is clicked
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            // Close modal when clicking outside of it
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
